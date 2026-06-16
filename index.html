@@ -118,11 +118,8 @@ nav.scrolled {
   white-space: nowrap;
   transition: all 0.25s;
 }
-.nav-cta:hover {
-  background: rgba(242,233,220,0.12);
-}
+.nav-cta:hover { background: rgba(242,233,220,0.12); }
 
-/* Mobile toggle */
 .nav-toggle {
   display: none;
   background: none;
@@ -140,7 +137,6 @@ nav.scrolled {
   transition: 0.3s;
 }
 
-/* Mobile menu */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -241,9 +237,7 @@ nav.scrolled {
   opacity: 0;
   animation: fadeUp 0.9s 0.75s forwards;
 }
-.btn-outline:hover {
-  background: rgba(242,233,220,0.1);
-}
+.btn-outline:hover { background: rgba(242,233,220,0.1); }
 
 .hero-right {
   display: flex;
@@ -265,19 +259,6 @@ nav.scrolled {
   height: 100%;
   object-fit: cover;
   object-position: center top;
-}
-.hero-circle-placeholder {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-dim);
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  text-align: center;
-  padding: 24px;
 }
 
 /* ─────────────────────────────────────────────
@@ -308,23 +289,16 @@ section { padding: 100px 48px; }
 /* ─────────────────────────────────────────────
    ABOUT
 ───────────────────────────────────────────── */
-#about {}
-
 .about-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
 }
 
-.about-col {
-  padding: 0 40px 0 0;
-}
+.about-col { padding: 0 40px 0 0; }
 .about-col + .about-col {
   padding-left: 40px;
   border-left: 1px solid rgba(242,233,220,0.14);
-}
-.about-col + .about-col + .about-col {
-  padding-left: 40px;
 }
 
 .about-col-title {
@@ -345,7 +319,6 @@ section { padding: 100px 48px; }
 }
 .about-col p:last-child { margin-bottom: 0; }
 
-/* Values card */
 .values-wrap {
   margin-top: 72px;
   display: flex;
@@ -391,9 +364,7 @@ section { padding: 100px 48px; }
 /* ─────────────────────────────────────────────
    PROGRAMS
 ───────────────────────────────────────────── */
-#programs {
-  padding-top: 90px;
-}
+#programs { padding-top: 90px; }
 
 .programs-intro {
   text-align: center;
@@ -511,18 +482,18 @@ section { padding: 100px 48px; }
 .btn-pill .arrow { font-style: normal; }
 
 /* ─────────────────────────────────────────────
-   COACH
+   COACH  ★ 구조 버그 수정
 ───────────────────────────────────────────── */
-#coach { }
+#coach {}
 
 .coach-grid {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
   gap: 72px;
   align-items: start;
-  margin-top: 0;
 }
 
+/* ★ 사진 div — 독립적으로 닫힘 */
 .coach-photo {
   border-radius: var(--r);
   overflow: hidden;
@@ -532,19 +503,11 @@ section { padding: 100px 48px; }
 .coach-photo img {
   width: 100%; height: 100%;
   object-fit: cover;
-}
-.coach-photo-placeholder {
-  width: 100%; height: 100%;
-  background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.01) 100%);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--text-dim);
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  min-height: 480px;
-  text-align: center;
-  padding: 24px;
+  object-position: center top;
+  display: block;
 }
 
+/* ★ coach-right — 사진 div 바깥, 독립 컬럼 */
 .coach-right {}
 
 .coach-name {
@@ -566,9 +529,7 @@ section { padding: 100px 48px; }
   margin-bottom: 32px;
 }
 
-.coach-block {
-  margin-bottom: 32px;
-}
+.coach-block { margin-bottom: 32px; }
 .coach-block-title {
   font-size: 15px;
   font-weight: 500;
@@ -613,9 +574,9 @@ section { padding: 100px 48px; }
 }
 
 /* ─────────────────────────────────────────────
-   SPACE
+   SPACE  ★ 사진 그리드 구조 수정
 ───────────────────────────────────────────── */
-#space { }
+#space {}
 
 .space-grid {
   display: grid;
@@ -625,7 +586,6 @@ section { padding: 100px 48px; }
   margin-top: -16px;
 }
 
-.space-left {}
 .space-left p {
   font-size: 14.5px;
   color: var(--text-muted);
@@ -662,6 +622,7 @@ section { padding: 100px 48px; }
   font-size: 14px;
 }
 
+/* ★ 4장 각각 독립 div로 분리 */
 .space-photos {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -678,19 +639,10 @@ section { padding: 100px 48px; }
   object-fit: cover;
   display: block;
 }
-.space-photo:nth-child(1) { grid-row: 1; aspect-ratio: 1/1.05; }
-.space-photo:nth-child(2) { grid-row: 1; aspect-ratio: 1/0.65; align-self: start; }
-.space-photo:nth-child(3) { grid-row: 2; aspect-ratio: 1/0.65; align-self: end; }
-.space-photo:nth-child(4) { grid-row: 2; aspect-ratio: 1/1.05; }
-.space-photo-ph {
-  width: 100%; height: 100%;
-  min-height: 160px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--text-dim);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-}
+.space-photo:nth-child(1) { aspect-ratio: 1/1.05; }
+.space-photo:nth-child(2) { aspect-ratio: 1/0.65; }
+.space-photo:nth-child(3) { aspect-ratio: 1/0.65; }
+.space-photo:nth-child(4) { aspect-ratio: 1/1.05; }
 
 /* ─────────────────────────────────────────────
    CTA SECTION
@@ -731,10 +683,7 @@ section { padding: 100px 48px; }
   transition: all 0.2s;
   letter-spacing: 0.02em;
 }
-.btn-kakao:hover {
-  background: #ffd84d;
-  transform: translateY(-1px);
-}
+.btn-kakao:hover { background: #ffd84d; transform: translateY(-1px); }
 .btn-kakao svg { width: 20px; height: 20px; }
 
 /* ─────────────────────────────────────────────
@@ -865,10 +814,7 @@ section { padding: 100px 48px; }
   overflow: hidden;
   transition: max-height 0.35s ease, padding 0.35s ease;
 }
-.faq-item.open .faq-a {
-  max-height: 200px;
-  padding-top: 14px;
-}
+.faq-item.open .faq-a { max-height: 200px; padding-top: 14px; }
 
 /* ─────────────────────────────────────────────
    FOOTER
@@ -928,10 +874,7 @@ footer {
   transform: translateY(28px);
   transition: opacity 0.75s ease, transform 0.75s ease;
 }
-.reveal.visible {
-  opacity: 1;
-  transform: none;
-}
+.reveal.visible { opacity: 1; transform: none; }
 
 @keyframes fadeUp {
   to { opacity: 1; transform: translateY(0); }
@@ -946,7 +889,6 @@ footer {
 @media (max-width: 900px) {
   section { padding: 80px 28px; }
   #home { padding: 90px 28px 72px; }
-
   nav { padding: 18px 28px; }
   nav.scrolled { padding: 12px 28px; }
   .nav-links { display: none; }
@@ -954,26 +896,26 @@ footer {
   .nav-right .nav-cta { display: none; }
   .nav-toggle { display: flex; }
 
-  .hero-inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
   .hero-left { order: 2; }
   .hero-right { order: 1; }
   .hero-sub { margin-left: auto; margin-right: auto; }
   .hero-circle { width: min(320px, 70vw); height: min(320px, 70vw); }
 
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
-  .about-col + .about-col { border-left: none; padding-left: 0; border-top: 1px solid rgba(242,233,220,0.14); padding-top: 48px; }
+  .about-col + .about-col {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(242,233,220,0.14);
+    padding-top: 48px;
+  }
   .about-col { padding-right: 0; }
-
   .values-card { padding: 40px 32px; }
 
   .programs-grid { grid-template-columns: 1fr; }
 
   .coach-grid { grid-template-columns: 1fr; gap: 40px; }
   .coach-photo { max-width: 360px; margin: 0 auto; }
-  .coach-photo-placeholder { min-height: 320px; }
 
   .space-grid { grid-template-columns: 1fr; gap: 48px; }
 
@@ -990,13 +932,10 @@ footer {
   section { padding: 64px 20px; }
   #home { padding: 80px 20px 64px; }
   nav { padding: 16px 20px; }
-
   .hero-title { font-size: 38px; }
   .section-heading { font-size: 28px; }
-
   .contact-channels { grid-template-columns: 1fr; }
   .contact-heading { font-size: 34px; }
-
   footer { padding: 40px 20px 32px; }
 }
 </style>
@@ -1006,7 +945,6 @@ footer {
 <!-- ──────── NAVIGATION ──────── -->
 <nav id="navbar">
   <a href="#home" class="nav-logo">찬<span>GYM</span></a>
-
   <ul class="nav-links">
     <li><a href="#home">HOME</a></li>
     <li><a href="#about">ABOUT</a></li>
@@ -1015,7 +953,6 @@ footer {
     <li><a href="#space">SPACE</a></li>
     <li><a href="#contact">CONTACT</a></li>
   </ul>
-
   <div class="nav-right">
     <div class="nav-icon">
       <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1025,7 +962,6 @@ footer {
     </div>
     <a href="#contact" class="nav-cta">상담 문의</a>
   </div>
-
   <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">
     <span></span><span></span><span></span>
   </button>
@@ -1053,9 +989,7 @@ footer {
     </div>
     <div class="hero-right">
       <div class="hero-circle">
-     <img src="images/hero.jpg" alt="찬GYM 트레이닝 사진"
-          style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-  ══════════════════════════════════════
+        <img src="images/hero.jpg" alt="찬GYM 트레이닝 사진">
       </div>
     </div>
   </div>
@@ -1066,7 +1000,6 @@ footer {
   <div class="section-inner">
     <p class="section-label reveal">ABOUT</p>
     <h2 class="section-heading reveal">찬GYM은 어떤 공간인가요.</h2>
-
     <div class="about-grid reveal">
       <div class="about-col">
         <h3 class="about-col-title">운동보다 습관.</h3>
@@ -1085,7 +1018,6 @@ footer {
         <p>웨이트 트레이닝과 필라테스 기반의 움직임을 함께 활용하며, 필요한 경우 영양 피드백도 함께 진행합니다.</p>
       </div>
     </div>
-
     <div class="values-wrap reveal">
       <div class="values-card">
         <p class="values-label">찬GYM이 중요하게 생각하는 것</p>
@@ -1109,7 +1041,6 @@ footer {
     <p class="programs-intro reveal">찬GYM의 모든 프로그램은 1:1로 진행됩니다.<br>어떤 프로그램이든 첫 상담을 통해 지금 상태에 맞게 설계됩니다.</p>
 
     <div class="programs-grid">
-      <!-- Card 1 -->
       <div class="prog-card reveal">
         <span class="prog-tag">기본 프로그램</span>
         <h3 class="prog-title">퍼스널 트레이닝</h3>
@@ -1122,8 +1053,6 @@ footer {
           <li>체력을 기초부터 다지고 싶은 분</li>
         </ul>
       </div>
-
-      <!-- Card 2 -->
       <div class="prog-card reveal">
         <span class="prog-tag">체형 · 통증</span>
         <h3 class="prog-title">체형 교정 &amp; 통증 개선</h3>
@@ -1136,8 +1065,6 @@ footer {
           <li>자세를 오래 유지하기 어렵거나 피로를 자주 느끼는 분</li>
         </ul>
       </div>
-
-      <!-- Card 3 -->
       <div class="prog-card reveal">
         <span class="prog-tag">체중 · 식이</span>
         <h3 class="prog-title">다이어트 프로그램</h3>
@@ -1153,7 +1080,6 @@ footer {
     </div>
 
     <div class="programs-grid" style="margin-top: 20px;">
-      <!-- Card 4 -->
       <div class="prog-card reveal">
         <span class="prog-tag">재활 · 회복</span>
         <h3 class="prog-title">재활성 운동</h3>
@@ -1166,8 +1092,6 @@ footer {
           <li>의료진 권유로 운동이 필요한 분</li>
         </ul>
       </div>
-
-      <!-- Card 5 -->
       <div class="prog-card reveal">
         <span class="prog-tag">임산부 · 산후</span>
         <h3 class="prog-title">산전 · 산후 트레이닝</h3>
@@ -1180,8 +1104,6 @@ footer {
           <li>산후 코어 약화, 골반 통증이 있는 분</li>
         </ul>
       </div>
-
-      <!-- Card 6 -->
       <div class="prog-card reveal">
         <span class="prog-tag">건강 관리</span>
         <h3 class="prog-title">대사질환 관리 운동</h3>
@@ -1203,21 +1125,22 @@ footer {
   </div>
 </section>
 
-<!-- ──────── COACH ──────── -->
+<!-- ──────── COACH ──────── ★ 구조 버그 수정: coach-photo 와 coach-right 가 형제 요소로 분리됨 -->
 <section id="coach">
   <div class="section-inner">
     <p class="section-label reveal">COACH</p>
     <h2 class="section-heading reveal" style="margin-bottom: 56px;">대표 트레이너 소개</h2>
 
     <div class="coach-grid">
+
+      <!-- ★ coach-photo: 여기서 닫힘 -->
       <div class="coach-photo reveal">
-    
-     <img src="images/coach.jpg" alt="찬GYM 대표 트레이너"
-          style="width:100%;height:100%;object-fit:cover;">
+        <img src="images/coach.jpg" alt="찬GYM 대표 트레이너 정찬희">
+      </div>
 
-
+      <!-- ★ coach-right: 독립된 컬럼 -->
       <div class="coach-right reveal">
-        <h3 class="coach-name">[대표 트레이너 이름]</h3>
+        <h3 class="coach-name">정찬희</h3>
         <p class="coach-role">CHANGYM HEAD TRAINER</p>
         <hr class="coach-divider">
 
@@ -1240,18 +1163,21 @@ footer {
         <div class="coach-certs">
           <p class="coach-certs-label">자격 &amp; 경력</p>
           <ul class="coach-certs-list">
-            <li>[자격증 이름] — 예: 생활스포츠지도사 2급</li>
-            <li>[관련 전공 또는 수료 과정]</li>
-            <li>[경력 연차 및 주요 경험]</li>
-            <li>[기타 전문 자격: 필라테스, 재활, 산전·산후 등]</li>
+            <li>생활스포츠지도사 2급 (보디빌딩)</li>
+            <li>노인스포츠지도사</li>
+            <li>찬GYM PT &amp; Pilates Studio 대표</li>
+            <li>블랑꼬 피트니스 지점장</li>
+            <li>충북대 Wellness Project 자문</li>
+            <li>운동과학 팟캐스트 출연</li>
           </ul>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ──────── SPACE ──────── -->
+<!-- ──────── SPACE ──────── ★ 사진 4장 각각 독립 div -->
 <section id="space">
   <div class="section-inner">
     <p class="section-label reveal">SPACE</p>
@@ -1262,45 +1188,28 @@ footer {
         <p>찬GYM은 동시에 두 팀이 운동하지 않습니다. 예약된 시간에, 한 분만 이용하는 공간입니다. 타인의 시선이 없다는 것, 생각보다 운동에 큰 영향을 줍니다.</p>
         <p>넓지 않지만 필요한 것은 모두 있습니다. 트레이닝에 집중하기 위한 기구들로만 구성되어 있고, 세션과 세션 사이에 정리와 환기를 마칩니다.</p>
         <p>운동 공간의 분위기는 생각보다 중요합니다. 들어서는 순간 조용하고 정돈된 느낌. 그 느낌이 운동을 시작하게 만들고, 다시 오게 합니다.</p>
-
         <hr class="space-divider">
-
         <ul class="space-features">
-          <li>
-            <span class="space-feat-icon">◈</span>
-            1:1 전용 공간, 타인과 겹치지 않음
-          </li>
-          <li>
-            <span class="space-feat-icon">◻</span>
-            예약제 운영, 항상 청결하게 준비
-          </li>
-          <li>
-            <span class="space-feat-icon">◎</span>
-            주차 가능 / [위치 안내]
-          </li>
-          <li>
-            <span class="space-feat-icon">◇</span>
-            에어컨, 공기청정기 완비
-          </li>
+          <li><span class="space-feat-icon">◈</span>1:1 전용 공간, 타인과 겹치지 않음</li>
+          <li><span class="space-feat-icon">◻</span>예약제 운영, 항상 청결하게 준비</li>
+          <li><span class="space-feat-icon">◎</span>상가 앞 자유 주차 가능</li>
+          <li><span class="space-feat-icon">◇</span>에어컨, 공기청정기 완비</li>
         </ul>
       </div>
 
+      <!-- ★ 사진 4장 각각 독립 div -->
       <div class="space-photos reveal">
         <div class="space-photo">
-          <img src="images/space1.jpg" alt="공간 사진 1"> -->
-          
-  <img src="images/space1.jpg" alt="찬GYM 공간 사진" style="width:100%;height:100%;object-fit:cover;display:block;">
- 
-  
-
-  <img src="images/space2.jpg" alt="찬GYM 공간 사진" style="width:100%;height:100%;object-fit:cover;display:block;">
- 
-  
-  <img src="images/space3.jpg" alt="찬GYM 공간 사진" style="width:100%;height:100%;object-fit:cover;display:block;">
-  
-  
-  <img src="images/space4.jpg" alt="찬GYM 공간 사진" style="width:100%;height:100%;object-fit:cover;display:block;">
-
+          <img src="images/space1.jpg" alt="찬GYM 공간 사진 1">
+        </div>
+        <div class="space-photo">
+          <img src="images/space2.jpg" alt="찬GYM 공간 사진 2">
+        </div>
+        <div class="space-photo">
+          <img src="images/space3.jpg" alt="찬GYM 공간 사진 3">
+        </div>
+        <div class="space-photo">
+          <img src="images/space4.jpg" alt="찬GYM 공간 사진 4">
         </div>
       </div>
     </div>
@@ -1314,7 +1223,6 @@ footer {
       <h2 class="cta-heading">지금, 첫 상담을 시작해보세요.</h2>
       <p class="cta-sub">부담 없이 연락해 주세요.<br>현재 상태와 목표를 듣고,<br>맞는 방향을 함께 찾아드립니다.</p>
       <a href="https://pf.kakao.com/_ULLPn/chat/" class="btn-kakao" target="_blank" rel="noopener">
-        <!-- 카카오 아이콘 -->
         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 3C7.029 3 3 6.373 3 10.5c0 2.642 1.594 4.971 4.007 6.378l-.98 3.647c-.085.317.272.575.543.39L10.82 18.4A10.79 10.79 0 0 0 12 18c4.971 0 9-3.373 9-7.5S16.971 3 12 3z"/>
         </svg>
@@ -1336,59 +1244,48 @@ footer {
         <p class="channel-num">CHANNEL 01</p>
         <h3 class="channel-title">카카오톡 채널</h3>
         <p class="channel-info">@찬GYM</p>
-        <a href="https://pf.kakao.com/_ULLPn/chat/" class="channel-link" target="_blank" rel="noopener">
-          카카오톡으로 문의하기 ↗
-        </a>
+        <a href="https://pf.kakao.com/_ULLPn/chat/" class="channel-link" target="_blank" rel="noopener">카카오톡으로 문의하기 ↗</a>
       </div>
-
       <div class="channel-card reveal">
         <p class="channel-num">CHANNEL 02</p>
-        <h3 class="channel-title">전화 & 문자 상담</h3>
+        <h3 class="channel-title">전화 &amp; 문자 상담</h3>
         <p class="channel-info">010-4913-3974</p>
         <div class="channel-hours">
           <span><span>연중무휴</span><span>08:00 – 23:00</span></span>
         </div>
         <a href="tel:010-4913-3974" class="channel-link">전화하기 ↗</a>
       </div>
-
       <div class="channel-card reveal">
         <p class="channel-num">CHANNEL 03</p>
         <h3 class="channel-title">인스타그램</h3>
         <p class="channel-info">@chan_gym_pt</p>
-        <a href="https://instagram.com/chan_gym_pt" class="channel-link" target="_blank" rel="noopener">
-          인스타그램 보러가기 ↗
-        </a>
+        <a href="https://instagram.com/chan_gym_pt" class="channel-link" target="_blank" rel="noopener">인스타그램 보러가기 ↗</a>
       </div>
-
       <div class="channel-card reveal">
         <p class="channel-num">CHANNEL 04</p>
         <h3 class="channel-title">위치 안내</h3>
         <p class="channel-info">충청북도 충주시 금제4길 7</p>
-        <a href="https://naver.me/xIeOazhZ" class="channel-link" target="_blank" rel="noopener">
-          네이버 지도로 보기 ↗
-        </a>
+        <a href="https://naver.me/xIeOazhZ" class="channel-link" target="_blank" rel="noopener">네이버 지도로 보기 ↗</a>
       </div>
     </div>
 
-    <!-- FAQ -->
     <div class="faq-wrap reveal">
       <h3 class="faq-title">자주 묻는 질문</h3>
-
       <div class="faq-item">
         <div class="faq-q">운동을 전혀 해본 적이 없어도 괜찮나요? <span class="faq-toggle">+</span></div>
         <div class="faq-a">네, 오히려 처음인 분들에게 더 잘 맞는 공간입니다. 처음부터 제대로 배우면 훨씬 효율적으로 운동하실 수 있습니다.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">체험 수업이 있나요? <span class="faq-toggle">+</span></div>
-        <div class="faq-a">체험 수업은 1회/70,000원의 비용이 발생합니다. 진행 순서는 다음과 같습니다 구두 상담 -> 체형 사진 촬영 후 해설 -> 심폐 지구력 및 기초 근력 테스트 -> 운동 프로그램 설계 -> 상담 리포트 전달</div>
+        <div class="faq-a">체험 수업은 1회 70,000원입니다. 구두 상담 → 체형 사진 촬영 및 해설 → 심폐지구력 및 기초 근력 테스트 → 운동 프로그램 설계 → 상담 리포트 전달 순서로 진행됩니다.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">수업 횟수나 기간은 어떻게 정하나요? <span class="faq-toggle">+</span></div>
-        <div class="faq-a">목표와 생활 패턴에 따라 함께 조율합니다. 주 2회, 3회 등 다양하게 선택 가능합니다. 자세한 계획은 상담 리포트에 첨부하고 있습니다</div>
+        <div class="faq-a">목표와 생활 패턴에 따라 함께 조율합니다. 주 2회, 3회 등 다양하게 선택 가능합니다. 자세한 계획은 상담 리포트에 첨부하고 있습니다.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">주차는 가능한가요? <span class="faq-toggle">+</span></div>
-        <div class="faq-a">상가 앞 자유 주차 가능합니다</div>
+        <div class="faq-a">상가 앞 자유 주차 가능합니다.</div>
       </div>
     </div>
   </div>
@@ -1421,10 +1318,10 @@ window.addEventListener('scroll', () => {
 });
 
 /* ── MOBILE MENU ── */
-const toggle   = document.getElementById('navToggle');
-const mMenu    = document.getElementById('mobileMenu');
-const mClose   = document.getElementById('mobileClose');
-const mmLinks  = document.querySelectorAll('.mm-link');
+const toggle  = document.getElementById('navToggle');
+const mMenu   = document.getElementById('mobileMenu');
+const mClose  = document.getElementById('mobileClose');
+const mmLinks = document.querySelectorAll('.mm-link');
 
 toggle.addEventListener('click', () => {
   mMenu.classList.add('open');
@@ -1440,7 +1337,7 @@ mmLinks.forEach(l => l.addEventListener('click', closeMenu));
 /* ── SCROLL REVEAL ── */
 const reveals = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
+  entries.forEach((e) => {
     if (e.isIntersecting) {
       const siblings = [...e.target.parentElement.querySelectorAll('.reveal')];
       const idx = siblings.indexOf(e.target);
